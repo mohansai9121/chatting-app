@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Grid, IconButton, Panel, Row } from 'rsuite'
+import { Button, Col, Container, Grid, IconButton, Panel, Row } from 'rsuite'
 import { FaFacebook,FaGoogle } from 'react-icons/fa'
 import { auth } from '../misc/firebase'
 //import firebase from 'firebase/compat/app'
@@ -38,6 +38,11 @@ const SignIn = () => {
                   <IconButton appearance='primary' color='green' icon={<FaGoogle/>} onClick={googleSignIn}>
                     Continue With Google
                   </IconButton>
+                </div><br/><br/>
+                <div style={{textAlign:'center'}}>
+                  <Button appearance='ghost'>
+                    <a href='/'>Back to Home</a>
+                  </Button>
                 </div>
               </Panel>
             </Col>

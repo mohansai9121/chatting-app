@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { Col, Container, Grid, Panel, Row } from 'rsuite'
 import '../styles/styles.scss'
+import Navigation from './Navigation'
 
 const Home = () => {
   return (
@@ -12,15 +13,15 @@ const Home = () => {
             <Col xs={24} md={12} mdOffset={6}>
               <Panel>
                 <div style={{textAlign:'center'}}>
-                  <h2>Welcome to Chatting-app</h2>
-                  <p>A progressive web app for chatting</p><br></br>
-                  <Link to='/signIn' className='link'>SignIn</Link>
+                  <br></br>
+                  <Navigation/>
                 </div>
               </Panel>
             </Col>
           </Row>
         </Grid>
       </Container>
+      <Outlet/>
     </div>
   )
 }
